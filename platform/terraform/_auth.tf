@@ -7,12 +7,6 @@ terraform {
     }
   }
 }
-
-variable "personal_access_token" {
-  type      = string
-  sensitive = true
-}
-
 provider "konnect" {
   personal_access_token = env("PERSONAL_ACCESS_TOKEN")
   server_url            = "https://eu.api.konghq.com"
