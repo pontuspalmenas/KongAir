@@ -25,6 +25,6 @@ jobs:
 
     - name: Apply Terraform
       working-directory: platform/terraform
-      run: terraform apply -auto-approve
+      run: terraform apply -auto-approve -var "personal_access_token=${{ secrets.PERSONAL_ACCESS_TOKEN }}"
       env:
         TF_VAR_PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
