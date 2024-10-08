@@ -9,7 +9,7 @@ terraform {
 }
 
 variable "personal_access_token" {
-  description = "Personal access token for the Konnect provider"
+  description = "Personal access token for Konnect"
   type        = string
   sensitive   = true
 }
