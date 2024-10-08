@@ -14,6 +14,6 @@ variable "personal_access_token" {
 }
 
 provider "konnect" {
-  personal_access_token = var.personal_access_token
+  personal_access_token = env("PERSONAL_ACCESS_TOKEN")
   server_url            = "https://eu.api.konghq.com"
 }
