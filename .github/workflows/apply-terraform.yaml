@@ -21,10 +21,10 @@ jobs:
       working-directory: platform/terraform
       run: terraform init
       env:
-        PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        TF_VAR_PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
     - name: Apply Terraform
       working-directory: platform/terraform
       run: terraform apply -auto-approve
       env:
-        PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        TF_VAR_PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
